@@ -7,8 +7,11 @@ public class Homework_1 {
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Type a number (from 5 to 20): ");
-        long num = scan.nextInt();
+        long num = scan.nextLong();
 
-        System.out.println("Factorial of " + num + " is " + Methods.findingFactorial(Methods.checkingCorrectNum(num), 2, 1));
+        num = Methods.checkingIfNumIsCorrect(num);
+
+        System.out.println("Factorial of " + num + " is " +
+                Methods.findingFactorial(num, 1, 1));
     }
 }
