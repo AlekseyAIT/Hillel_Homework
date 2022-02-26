@@ -7,13 +7,10 @@ public class Main {
         Thread thread = new Thread(childThread);
         thread.start();
 
-        try {
-            System.out.println("Main thread is sleeping!");
-            Thread.sleep(3L * 1000L);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("Main thread is not sleeping now!");
+        System.out.println("Main thread is sleeping!");
+        Thread.sleep(3L * 1000L);
+
+        System.out.println("Main thread is not sleeping no" + "w!");
 
         Thread.sleep(2L * 1000L); // 2 sec
         thread.interrupt();
